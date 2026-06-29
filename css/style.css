@@ -1,22 +1,61 @@
-h1 {
-    text-align: start;
-    font-family: Segoe UI;
-    color: white;
-    font-size: 25px;
+:root{
+    --base-clr: #1A1A1A;
+    --line-clr: #42434A;
+    --hover-clr: #222533;
+    --text-clr: white;
+    --accent-clr: #6B8F71;
+    --secondary-clr: #b0b3c1;
 }
-h3 {
-    font-family: Segoe UI;
-    color: white;
-    font-size: 20px;
+*{
+    margin: 0;
+    padding: 0;
 }
-p {
-    font-family: Segoe UI;
-    color: white;
+.sidebar-logo {
+    display: block;
+    margin: 25px auto 20px auto;
 }
-ul {
-    font-family: Segoe UI;
-    color: white;
+html{
+    font-family: "Segoe UI";
+    font-weight: 450;
+    line-height: 1.5;
 }
-body {
-    background-color: #1A1A1A;
+body{
+    min-height: 100vh;
+    min-height: 100dvh;
+    background-color: var(--base-clr);
+    color: var(--text-clr);
 }
+#sidebar{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 250px;
+    background-color: var(--base-clr);
+    border-right: 1px solid var(--line-clr);
+}
+#sidebar ul{
+    list-style: none;
+}
+#sidebar > ul > li first-child{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 16px;
+}
+#sidebar ul li.active a {
+    color: var(--accent-clr);
+}
+#sidebar ul li.active svg {
+    fill: var(--accent-clr);
+}
+#sidebar ul li.active svg path {
+    fill: var(--accent-clr);
+}
+#sidebar a, #sidebar .dropdown-btn{
+    border-radius: .5em;
+    padding: 1em;
+    text-decoration: none;
+    color: var(--text-clr);
+    display: flex;
+    gap: 1em;
+}
+
+
